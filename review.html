@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>Latest place to fly</title>
+</head>
+<body>
+    <header class="home-header">
+      <div class="container">
+        <div class="logo">
+          <img src="assets/images/web-logo.svg" alt="website-logo">
+        </div>
+
+        <nav>
+          <div id="menuToggle">
+            <input class="burger-input" type="checkbox"/>
+            
+            <!-- burger-spans -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- menu -->
+            <ul id="menu" class="home-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="member-area.html">Member Area</a></li>
+              <li><a href="community-group.html">Community Group</a></li>
+              <li><a href="latest-places-to-fly.html">Latest Places to Fly</a></li>
+              <li><a href="training-online.html">Training Online</a></li>
+              <li><a href="review.html" class="review">Review</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="searchbar-container">
+      <form id="search-from"> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+        <input class="searchbar" id="search" type="search" onkeypress="handle(event)"/>
+      </form>
+    </div>
+    <div class="scroll-up" id="PlacesToFly-arrowUp">
+        <a href="#review-header" class="arrow-up-link">
+          <i class="fas fa-chevron-circle-up arrow-up"></i>
+        </a>
+    </div>
+    <img src="./assets/images/GlidingAndSunset.jpg" alt="background gliding image" width="1024" height="720" class="review-img">
+
+    <section class="reviews-container" id="search-word-1">
+        <h1 id="review-header">Check Our Reviews</h1>
+        <div class="customer-review" id="review-1">
+            <h2 class="customer" id="customer-1">Sam Smith</h2>
+            <p>Harness: The harness serves to provide the pilot with a sitting or standing place and functions as a backpack. Airbag protectors or foam below the seat protect in case of trouble launching or landing. Harnesses attach to wings via baffled cells.</p>
+        </div>
+        <div class="customer-review" id="review-2">
+            <h2 class="customer" id="customer-2">Sara Wood</h2>
+            <p>Variometers: Variometers gauge altitude and aid pilots to gain height and locate rising and sinking air by means of short audio signals.</p>
+        </div>
+        <div class="customer-review" id="review-3">
+            <h2 class="customer" id="customer-3">Jeorge Schofield</h2>
+            <p>Radio: Radio is required to communicate with other pilots, paragliding assistants, airports and air traffic controllers. Each country has its own system with a specific frequency range.</p>
+        </div>
+        
+    </section>
+
+    <section class="review-form" id="search-word-2">
+        <h1>We would like to see your review!</h1>
+        <form> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+            <div class="radio-btns">
+                <p>Choose a type of gliding:</p>
+                <input type="radio" name="type_of_gliding" value="Hang gliding" id="hang-gliding">
+                <label for="hang-gliding">Hang gliding</label><br><br>
+                <input type="radio" name="type_of_gliding" value="Paragliding" id="paragliding">
+                <label for="paragliding">Paragliding</label><br><br>
+                <input type="radio" name="type_of_gliding" value="Sailplane" id="sailplane">
+                <label for="sailplane">Sailplane</label>
+            </div>
+
+            <label>Gliding specification:</label>
+            <select name="specification">
+                <option value="volvo">Harness</option>
+                <option value="saab">Variometers</option>
+                <option value="fiat">Radio</option>
+                <option value="audi">Others</option>
+            </select>
+
+
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer class="review-footer">
+        <p>All rights reserved to MG Gliders. | &copy; 2021</p>
+        <div class="social-media-container">
+          <a href="https://www.facebook.com/wildparagliding/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/goparagliding/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=hang+gliding" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

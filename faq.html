@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>FAQ</title>
+
+</head>
+<body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="assets/images/web-logo.svg" alt="website-logo">
+        </div>
+
+        <nav>
+          <div id="menuToggle">
+            <input title="hamburger" class="burger-input" type="checkbox"/>
+            
+            <!-- burger-spans --> 
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- menu -->
+            <ul id="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faq.html" class="faq">FAQ</a></li>
+              <li><a href="member-area.html">Member Area</a></li>
+              <li><a href="community-group.html">Community Group</a></li>
+              <li><a href="latest-places-to-fly.html">Latest Places to Fly</a></li>
+              <li><a href="training-online.html">Training Online</a></li>
+              <li><a href="review.html">Review</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="faq" class="faqSection">
+      <img src="./assets/images/hangGliding.jpg" alt="background gliding image">
+      <div class="searchbar-container">
+
+        <form id="search-from"> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+          <input class="searchbar" id="search" type="search" onkeypress="handle(event)"/>
+        </form>
+
+      </div>   
+      <div class="faq--header" id="search-word-1">
+            <h1>Frequently Asked Questions</h1>
+            <hr class="line">
+      </div>
+      <div class="faq--body question-container" id="search-word-2">
+        <div class="question">
+            <input title="checkbox1" class="qustionCheckBox" type="checkbox"/>
+            <i class="fas fa-chevron-down faq-arrow arrow1"></i>
+            <h3 id="searchpara">How often do you organise gliding?</h3>
+            <p class="question-text question-text1">Gliding activities happen throughout the year. Between October till March, 
+              gliding takes place twice a week while between April till September, gliding activities reduce to once a week.</p>
+        </div>
+        <div class="question">
+            <input title="checkbox2" class="qustionCheckBox" type="checkbox"/>
+            <i class="fas fa-chevron-down faq-arrow arrow2"></i>
+            <h3>Who is eligible for gliding?</h3>
+            <p class="question-text question-text2">Gliders must be at least over 18 years old and be in possession of gliding license in order
+              to be eligible for gliding.</p>
+        </div>
+        <div class="question">
+            <input title="checkbox3" class="qustionCheckBox" type="checkbox"/>
+            <i class="fas fa-chevron-down faq-arrow arrow3"></i>
+            <h3>How can I get gliding license?</h3>
+            <p class="question-text question-text3">Due to the current pandemic, we provide customers 
+              with <a href="training-online.html" class="intext-online-training">online training</a> sessions in order to obtain gliding license.</p>
+        </div>
+        <div class="question">
+            <input title="checkbox4" class="qustionCheckBox" type="checkbox"/>
+            <i class="fas fa-chevron-down faq-arrow arrow4"></i>
+            <h3>Where are your most common places to glide?</h3>
+            <p class="question-text question-text4">Due to the high demand, MG Gliders, activities take place in
+                several countries including Malta, Croatia, Lebanon and Italy.</p>
+        </div>
+        <div class="question">
+            <input title="checkbox5" class="qustionCheckBox" type="checkbox"/>
+            <i class="fas fa-chevron-down faq-arrow arrow5"></i>
+            <h3>Is gliding safe?</h3>
+            <p class="question-text question-text5">Gliding activities is intense and require special training. 
+              Lack of enough training might lead to seriousinjuries. We recommend you to obtain gliding license prior to gliding.</p>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+
+    <footer class="faq-footer">
+        <p>All rights reserved to MG Gliders. | &copy; 2021</p>
+        <div class="social-media-container">
+          <a href="https://www.facebook.com/wildparagliding/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/goparagliding/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=hang+gliding" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

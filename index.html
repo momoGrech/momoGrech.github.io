@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>Home Page</title>
+</head>
+<body id="body">
+    <header class="home-header">
+      <div class="container">
+        <div class="logo">
+          <img src="assets/images/web-logo.svg" alt="website-logo">
+        </div>
+
+        <nav>
+          <div id="menuToggle">
+            <input class="burger-input" type="checkbox"/>
+            
+            <!-- burger-spans -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- menu -->
+            <ul id="menu" class="home-menu">
+              <li><a href="index.html" class="home">Home</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="member-area.html">Member Area</a></li>
+              <li><a href="community-group.html">Community Group</a></li>
+              <li><a href="latest-places-to-fly.html">Latest Places to Fly</a></li>
+              <li><a href="training-online.html">Training Online</a></li>
+              <li><a href="review.html">Review</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="search-word-1">
+
+      <div class="searchbar-container">
+        <form id="search-from"> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+          <input class="searchbar" id="search" type="search" onkeypress="handle(event)"/>
+        </form>
+      </div>
+      <!-- hero webpage -->
+      <section class="hero" id="hero">
+        <img src="./assets/images/gliding-image.jpg" alt="background gliding image" class="hero-image" width="1080" height="720">
+
+        <div class="content-container">
+
+
+
+          <div class="hero__article">
+            <h1>GLIDE WITH US</h1>
+            <h2>WE OFFER THE BEST GLIDING ACTIVITIES</h2>
+          </div>
+          <div class="scroll-up">
+            <a href="#hero" class="arrow-up-link">
+              <i class="fas fa-chevron-circle-up arrow-up"></i>
+            </a>
+          </div>
+
+          <div class="arrow-container">
+            <i class="fas fa-chevron-down arrow-top"></i>
+            <i class="fas fa-chevron-down arrow-bottom"></i>
+          </div>
+            <div class="hero-scroll-down">
+              <a href="#activities" class="arrow-down-link">scroll down or click me</a>   
+            </div>
+
+        </div>
+      </section>
+
+      <!-- list of Activities -->
+      <section class="activities" id="activities">
+
+        <div class="activities--header" id="search-word-2">
+          <h1>Most Common Activities</h1>
+          <hr class="line">
+        </div>
+
+        <div class="activities--body">
+
+          <div class="card-container">
+            <div class="card">
+              <img src="./assets/images/lebanon-gliding.jpg" alt="Picture of gliding in lebanon" width="350" height="294">
+              <h3>Lebanon</h3>
+              <h4>Sunset Paragliding</h4>
+              <a href="latest-places-to-fly.html#location-1" class="card--btn">Read more</a>
+            </div>
+
+            <div class="card">
+              <img src="./assets/images/croatia-gliding.jpg" alt="Picture of gliding in Croatia"  width="350" height="294">
+              <h3>Croatia</h3>
+              <h4>Ocean Hang Gliding</h4>
+              <a href="latest-places-to-fly.html#location-2" class="card--btn">Read more</a>
+            </div>
+
+            <div class="card">
+              <img src="./assets/images/malta-gliding.jpg" alt="Picture of gliding in Malta"  width="350" height="294">
+              <h3>Malta</h3>
+              <h4>Summer Paragliding</h4>
+              <a href="latest-places-to-fly.html#location-3" class="card--btn">Read more</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Video -->
+      <div class="video-container">
+        <div class="video--header">
+          <h1>We love what we do</h1>
+          <hr class="line">
+        </div>
+        <video width="1000" height="500" autoplay controls muted> 
+          <source src="./assets/videos/gliding-video.mp4.mp4" type="video/mp4">
+          <source src="./assets/videos/gliding-video.webm.webm" type="video/webm">
+          Gliding video
+        </video>
+      </div>
+    </main>
+
+    <footer>
+        <p>All rights reserved to MG Gliders. | &copy; 2021</p>
+        <div class="social-media-container">
+          <a href="https://www.facebook.com/wildparagliding/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/goparagliding/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=hang+gliding" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

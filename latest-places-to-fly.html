@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>Latest places to fly</title>
+</head>
+<body>
+    <header class="home-header">
+      <div class="container">
+        <div class="logo">
+          <img src="assets/images/web-logo.svg" alt="website-logo">
+        </div>
+
+        <nav>
+          <div id="menuToggle">
+            <input class="burger-input" type="checkbox"/>
+            
+            <!-- burger-spans -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- menu -->
+            <ul id="menu" class="home-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="member-area.html">Member Area</a></li>
+              <li><a href="community-group.html">Community Group</a></li>
+              <li><a href="latest-places-to-fly.html" class="latest-places-to-fly">Latest Places to Fly</a></li>
+              <li><a href="training-online.html">Training Online</a></li>
+              <li><a href="review.html">Review</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="searchbar-container">
+      <form id="search-from"> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+        <input class="searchbar" id="search" type="search" onkeypress="handle(event)"/>
+      </form>
+    </div>
+    <div class="scroll-up" id="PlacesToFly-arrowUp">
+        <a href="#latestPlaceToFly-header" class="arrow-up-link">
+          <i class="fas fa-chevron-circle-up arrow-up"></i>
+        </a>
+    </div>
+
+    <div class="latestPlaceToFly-header" id="latestPlaceToFly-header">
+        <img src="./assets/images/GlidingAndSunset.jpg" alt="background gliding image" width="1024" height="720">
+        <h1 class="latestPlaceToFly-title" id="search-word-1">Latest places to fly</h1>
+    </div>
+    <section class="locations-container" id="search-word-2">
+        <div class="location location-1" id="location-1">
+            <img src="./assets/images/lebanon-gliding.jpg" alt="Picture of gliding in lebanon" width="460" height="307">
+            <p>Location: Lebanon <br>Mentor: Yes <br>Age: +22 <br>Safety Equipment is provided<br></p>
+        </div>
+
+        <div class="location location-2" id="location-2">
+            <img src="./assets/images/croatia-gliding.jpg" alt="Picture of gliding in Croatia" width="460" height="307">
+            <p>Location: Croatia <br>Mentor: Yes <br>Age: +20 <br>Safety Equipment is provided<br></p>
+        </div>
+
+        <div class="location location-3" id="location-3">
+            <img src="./assets/images/malta-gliding.jpg" alt="Picture of gliding in Malta" width="460" height="307">
+            <p>Location: Malta <br>Mentor: Yes <br>Age: +18 <br>Safety Equipment is provided<br></p>
+        </div>
+
+        <div class="location location-4" id="location-4">
+            <img src="./assets/images/GlidingOverOcean.jpg" alt="Gliding over ocean" width="460" height="307">
+            <p>Location: Italy <br>Mentor: No <br>Age: +18 <br>Safety Equipment is provided<br></p>
+        </div>
+
+    </section>
+
+    <footer class="latestPlaceToFly-footer">
+        <p>All rights reserved to MG Gliders. | &copy; 2021</p>
+        <div class="social-media-container">
+          <a href="https://www.facebook.com/wildparagliding/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/goparagliding/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=hang+gliding" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

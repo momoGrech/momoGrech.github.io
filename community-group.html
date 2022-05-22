@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>Community Group</title>
+</head>
+<body>
+    <header class="home-header">
+      <div class="container">
+        <div class="logo">
+          <img src="assets/images/web-logo.svg" alt="website-logo">
+        </div>
+
+        <nav>
+          <div id="menuToggle">
+            <input class="burger-input" type="checkbox"/>
+            
+            <!-- burger-spans -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- menu -->
+            <ul id="menu" class="home-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="member-area.html">Member Area</a></li>
+              <li><a href="community-group.html" class="communityGroup">Community Group</a></li>
+              <li><a href="latest-places-to-fly.html">Latest Places to Fly</a></li>
+              <li><a href="training-online.html">Training Online</a></li>
+              <li><a href="review.html">Review</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="communityGroup">
+      <div class="searchbar-container">
+        <form id="search-from"> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+          <input class="searchbar" id="search" type="search" onkeypress="handle(event)"/>
+        </form>
+      </div>
+
+        <div class="scroll-up" id="communityGroup-arrowUp">
+          <a href="#communityGroup" class="arrow-up-link">
+            <i class="fas fa-chevron-circle-up arrow-up"></i>
+          </a>
+      </div>
+
+      <img src="assets/images/glidingOverMountain.jpg" alt="background gliding image">
+
+        <article class="communityGoal" id="search-word-1">
+          <h1>About Us</h1>
+          <hr class="line">
+            <p>MG Glider was established in 2018 by Sam Smith who is up to date running the business. 
+              The company have organised several gildings activities as well as providing gliding license and free consultations. 
+              Our customer’s satisfaction is what keeps as motivated and gives us thye vibes to constantly look forward for improvement. 
+              Due to the positive reputation in the past years, we have expanded our events in several countries such as Malta, Lebanon, Croatia and Italy. The activities are Paragliding and Hang gliding with the possibility of providing our 
+              gliders with a mentor, especially for beginner gliders..</p>
+        </article>
+        <article class="glidingLaw" id="search-word-2">
+            <h1>Gliding Law</h1>
+            <hr class="line">
+            <p>Training in paragliding involves detailed knowledge of the discipline’s rules in order to keep safety a top priority. 
+              Learning to think ahead about possible dangerous situations will enable the participant to recognise a hazard early on as well as
+               make appropriate decisions quickly to rectify the problem. 
+              As paragliding gained popularity over time, authorities sought to establish rules regarding the right of way of different
+               aircraft. Hot air balloons are allowed right of way in preference to all other aircraft because they are slow and not motorised.
+                The category including sailplanes, paragliders and hand gliders is the next most important in this regard. Airplanes and helicopters
+                 should allow all other aircraft to pass since they are motorised and potentially dangerous to other aircraft. 
+                 <a href="https://www.paraglidingspain.eu/advanced-paragliding-courses/understand-rules-and-regulations-in-paragliding/" class="intext-law-information">Further 
+                  Information on gliding law can be obtained here.</a></p>
+        </article>
+    </section>
+
+
+
+
+
+    <footer class="CommunityGroup-footer">
+        <p>All rights reserved to MG Gliders. | &copy; 2021</p>
+        <div class="social-media-container">
+          <a href="https://www.facebook.com/wildparagliding/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/goparagliding/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=hang+gliding" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

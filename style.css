@@ -1,0 +1,1845 @@
+*,
+*::after,
+*::before {
+margin: 0;
+padding: 0;
+box-sizing: inherit; }
+
+*:focus {
+    outline: none;
+}
+html,body {
+    font-size: 62.5%; /*1rem = 10px*/
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    }
+
+header{
+position: fixed;
+background: rgba(69,68,68,0.9);
+width: 100%;
+border-bottom:3px solid #3CC194;
+height: 7rem;
+}
+
+/* home pager set-up */
+header {
+    height: 6.5rem;
+}
+
+/* solution to extra sroll of index body */
+#body {
+    overflow:initial;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0.9rem 2%;
+    height: 6.5rem;
+}
+
+/* home pager set-up */
+
+
+
+.logo img {
+    margin: 0;
+    width: 6em;
+    height: auto;
+}
+
+
+nav #menu {
+    list-style: none;
+}
+
+nav #menu li {
+    display: inline-block;
+    z-index: 10;
+    margin: 0.5rem auto;
+    padding-left: 1.5rem;
+}
+
+nav #menu li:last-child {
+    margin-bottom: 0.5rem;
+}
+
+nav ul li:last-child {
+    padding-right: 0;
+}
+
+nav ul li > a {
+    font-size: 1.8rem;
+    color: #eee;
+    text-decoration: none;
+}
+
+
+/* Colouring the active navigation links */
+.home, .faq , .member-area, .communityGroup, .latest-places-to-fly, .trainingOnline, .review {
+    color: rgba(60,193,148,1);
+}
+
+li a:hover {
+    color: #3CC194;
+}
+
+/* hide only hamburger button input */
+#menuToggle input{
+    display: none;
+}
+
+/* Hero section */
+.hero img {
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height:100vh;
+    z-index: -10;
+}
+
+.hero .hero__article {
+    display: block;
+    width: 90%;
+    height: 20rem;
+    -webkit-animation-name:fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+    animation-duration: 1s;
+    position: relative;
+    top: 100%;
+}
+
+.hero__article h1 {
+    font-size: 5rem;
+    color: rgb(183, 46, 46);
+}
+
+.hero__article h2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: rgb(39, 52, 61)
+}
+
+.content-container {
+    position: inherit;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 0.5fr 1fr;
+    gap: 1rem 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "searchbar"
+      "hero-content"
+      "arrow-down"
+      "arrow-up";
+      justify-items: center;
+}
+
+/* searchbar */
+.hero .searchbar-container { 
+    grid-area: searchbar; 
+    align-self: center;
+}
+ 
+.searchbar-container input {
+    width: 4rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    border: 2px solid #3CC194;
+    height: 4rem;
+    background-color: #3CC194;
+    background-image: url('./assets/images/loupe.svg');
+    background-size: 2rem;
+    background-position: 0.7rem; 
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 8rem;
+    left: 0;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    cursor: pointer;
+    text-emphasis: none;
+} 
+
+.searchbar-container input:focus {
+    background-color: #eee;
+    font-size: 1.6rem;
+    width: 20vw;
+    padding-left: 5rem;
+    cursor: text;
+}
+
+.hero .searchbar-container {
+    cursor: pointer;
+}
+
+/* scroll up button */
+.scroll-up { 
+    grid-area: arrow-up; 
+    width: 3rem;
+    height: 3rem;
+    justify-self: right;
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+    z-index: 100;
+    display: none;
+}
+
+#PlacesToFly-arrowUp, #communityGroup-arrowUp {
+    position: fixed;
+    bottom: 6.5rem;
+    right: 0.2rem;
+}
+
+.arrow-up-link {
+    text-decoration: none;
+}
+.arrow-up {
+    font-size: 3.7rem;
+    color: rgba(255, 153, 0, 0.705);
+    cursor: pointer;
+    position: fixed
+}
+
+.arrow-up:hover {
+    color: #FF9800;
+}
+
+.active-arrow {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+
+
+/* scroll down */
+.hero .hero-scroll-down {
+    grid-area: arrow-down; 
+    margin: auto;
+    height: 6rem;
+    border-radius: 2.3rem;
+    text-align: center;
+    width: 4rem;
+    position: relative;
+}  
+
+.arrow-container{
+    grid-area: arrow-down; 
+    width: 2.5rem;
+    height: 3rem;
+    position: relative;
+    top: 2.5rem;
+    text-align: center;
+    z-index: -1;
+}
+.hero-scroll-down > a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.arrow-top,
+.arrow-bottom {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    animation: fadeInDown 1.3s infinite;
+}
+
+.arrow-bottom {
+    margin-top: -1rem;
+    color: rgba(255, 255, 255, 0.349);
+}
+
+/* Activity section */
+.activities {
+    position: absolute;
+    top: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(rgba(73,73,73,0.6), rgba(32,33,33,1));
+    width: 100%;
+    height: 110vh;
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+
+.activities--header, .faq--header {
+    height: 10rem;
+    margin-top: 2rem;
+}
+
+.activities--header > h1, .video--header > h1, .faq--header, .MemberArea--header > h1,
+ .communityGoal > h1, .glidingLaw > h1, .latestPlaceToFly-title, .trainingOnlineHeader > h1, .reviews-container > h1,
+ .review-form >h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    background-image: linear-gradient(to right, #aaffa9, #11ffbd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.line {
+    height: 0.5rem;
+    width: 20%;
+    margin: 1rem auto;
+    background-image: linear-gradient(to right, #aaffa9, #11ffbd);
+    border-radius: 0.2rem;
+    border: none;
+}
+
+/* cards */
+.card-container {
+    width: 75%;
+    height: 75vh;
+    margin: 5rem auto 5rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card > img {
+    width: 100%;
+    height: 50%;
+    border-radius: 3px;
+    transition: transform 4s, filter ease;
+    transform-origin: bottom;
+}
+
+.card > img:hover {
+    transform: scale(1.3); 
+} 
+
+.card > h3 {
+    font-size: 3rem;
+    margin: 2rem;
+    font-weight: 600;
+}
+
+.card >h4 {
+    font-size: 2rem;
+}
+
+
+.card > .card--btn {
+    width: 9.5rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #20bf6b;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.7rem;
+    padding-top: 0.6rem;
+}
+
+
+.card--btn:hover {
+    background-color: #FF9800;
+}
+
+/* video */
+.video-container {
+    position: absolute;
+    top: 199vh;
+    height: 110vh;
+    width: 100%;
+    background-color: rgba(73,73,73,0.9);;
+    z-index: 1;
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.video-container video {
+    height: 65%;
+    width: 100%;
+    margin: 5rem auto;
+}
+
+.video--header > h1 {
+    margin-top: 10rem;
+}
+
+/* footer */
+footer {
+    position: relative;
+    top: 209vh;
+    background: rgba(69,68,68,1);
+    padding: 0.9rem 2%;
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.4rem solid #3CC194;
+}
+
+footer > * {
+    font-size: 2rem;
+    color: #eee;
+}
+
+footer .social-media-container a .fab {
+    margin: 0 2rem;
+    cursor: pointer;
+    color: #eee;
+}
+
+footer .social-media-container a {
+    text-decoration: none;
+}
+
+.arrow-down-link {
+    color: transparent;
+}
+
+
+/* Arrow up will display when scrolled down */
+
+
+/* hero content will disapear when scrolled down */
+.touch-fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.5s; 
+    opacity: 0;
+}
+
+
+.hero-block :not(.hero-image) {
+    display: none;
+}
+/* ending Home Page */
+
+
+/* Starting FAQ Page */
+/* FAQ section */
+#faq {
+    background-color:rgba(69,68,68,0.7);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+#faq img {
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height:100vh;
+    z-index: -10;
+}
+
+#faq .faq--header h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+#faq .question-container {
+    width: 100%;
+    height: 29rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#faq .question-container > .question {
+    position: relative;
+    display: block;
+    background-color: #eee;
+    width: 50rem;
+    height: 4rem;
+    text-align: left;
+    margin: 0.9rem 0;
+    border-radius: 1rem 1rem 0 0;
+}
+.question > h3 {
+    font-size: 1.6rem;
+    padding: 0.7rem;
+}
+
+.question .faq-arrow {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 0;
+}
+
+.question .qustionCheckBox {
+    visibility: visible;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    right: 0.3rem;
+    cursor: pointer;  
+    opacity: 0;
+    z-index: 10;
+    -webkit-touch-callout: none;
+}
+.question > .question-text {
+    position: absolute;
+    display: none;
+    background-color: #eee;
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 0 0 1rem 1rem;
+    padding-left: 0.6rem;
+    z-index: 1;
+    height: 7rem;
+}
+
+.show-Question {
+    display: block !important;
+}
+
+/* 180 degree */
+.flip-arrow {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+.card > h3 {
+    font-size: 3.5rem;
+    margin: 6rem 0 2rem 0;
+    font-weight: 600;
+}
+
+.intext-online-training, .intext-law-information{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+/* Ending FAQ Page */
+
+/* Starting Member Area Page */
+#MemberArea{
+  background-color:rgba(69,68,68,0.8);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    z-index: -1;
+}
+
+#MemberArea img, .review-img{
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.subscription-container{
+    background-color: #eee;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    width: 40vw;
+    height: 33rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.MemberArea--header{
+    height: 11.5rem;
+    margin: 7rem 0 0 0;
+}
+
+
+
+.MemberArea--header h3{
+    font-size: 3rem;
+    text-align: center;
+    background-image: linear-gradient(to right, #aaffa9, #11ffbd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subscription-container .subscription-input{
+    width: 30rem;
+    height: 3rem;
+    border: none;
+    border-bottom: 2px solid #3CC194;
+    background-color: transparent;
+    padding-left: 0.5rem;
+}
+
+.subscription-input::placeholder{
+    color: rgba(69,68,68,0.8);
+}
+
+
+.subscription-input:focus{
+    background-color: rgba(69,68,68,0.1);
+}
+
+.subscription-button{
+    width: 12rem;
+    height: 3.5rem;
+    background-color: #FF9800;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.MemberArea-footer{
+    position: absolute;
+    top: 92.5vh;
+}
+
+/* Public rules */
+.faq-footer, .MemberArea-footer{
+    position: absolute;
+    top: 100vh;
+}
+/* End of Member Area */
+
+
+/* Begining of Community Group */
+
+#communityGroup img{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: -1;
+    
+}
+
+.communityGoal > h1 {
+    padding-top: 26vh;   
+    background-color:rgba(69,68,68,0.8);
+}
+
+#communityGroup{
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100rem;
+    background-color:rgba(69,68,68,0.8);
+}
+
+
+
+.communityGoal > p, .glidingLaw > p{
+    column-count: 2;
+    color: #eee;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    padding: 1rem;
+    line-height: 2em;
+}
+
+.glidingLaw > h1{
+    padding-top: 5vh;
+}
+
+.intext-law-information{
+    color: white;
+}
+
+.glidingLaw{
+    height: 100rem;
+}
+
+.CommunityGroup-footer{
+    top: 0;
+    background-color: rgba(69,68,68,0.8);
+}
+/* end of Community Group */
+
+/* Begining of Latest places to fly */
+
+.latestPlaceToFly-header, .trainingOnlineHeader{
+    height: 30rem;
+    width: 100%;
+}
+
+.latestPlaceToFly-header img{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-position: center;
+    z-index: -1;
+    background-color: rgba(145, 145, 145, 0.8);
+}
+
+.latestPlaceToFly-title{
+    padding-top: 25vh;
+}
+
+.locations-container{
+    width: 100vw;
+    height: 170rem;
+    background-color: rgba(69,68,68,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-top: 3px solid #3CC194;
+}
+
+.location{
+    width: 90%;
+    height: 30.7rem;
+    background-color: #3CC194;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.2rem;
+    z-index: 1;
+}
+
+.location-2, .location-4{
+    flex-direction: row-reverse;
+}
+
+.location p{
+    padding: 5rem 0 0 3rem;
+    width: 40vw;
+    font-size: 2rem;
+    color:#eee;
+    line-height: 2.5em;
+}
+
+/* block component when hamburger is clicked */
+.locationBlock, .faqBlock{
+    animation: fadeOut;
+    animation-duration: 0.3s;
+    opacity: 0;
+    display: none;
+    z-index: -1;
+}
+
+/* unblock component when hamburger is clicked */
+.locationUnBlock, .faqUnBlock{
+    animation: fadeIn;
+    animation-duration: 1s;
+    opacity: 1;
+    display: block;
+    z-index: 1;
+}
+
+
+.location img{
+    width: 50vw;
+    height: 100%;
+    background-position: center;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.location-2 img, .location-4 img{
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.latestPlaceToFly-footer{
+    position: absolute;
+    top: calc(207rem - 7rem);;
+}
+/* End of Latest places to fly page */
+
+
+/* Begining Training Online session */
+.training-online-searchbar {
+    background: radial-gradient(circle, rgba(212,215,214,1) 1%, rgba(140,140,140,1) 100%);
+}
+
+.trainingOnlineHeader{
+    padding-top: 24.5vh;
+    height: 35rem;
+    background: radial-gradient(circle, rgba(212,215,214,1) 1%, rgba(140,140,140,1) 100%);
+    width: 100vw;
+}
+
+.trainingOnlineHeader > p{
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.training-container{
+    background: radial-gradient(circle, rgba(212,215,214,1) 3%, rgba(140,140,140,1) 100%);
+    width: 100vw;
+    height: 160vh;
+    display: grid; 
+    grid-template-columns: 0.5fr 0.5fr; 
+    grid-template-rows: 1.5fr 1.5fr; 
+    gap: 2% 2.5%; 
+    grid-template-areas: 
+    "day-1 day-2"
+    "day-3 day-4";
+    border-top: 2px solid rgba(69,68,68,1); 
+}
+
+.training-container > .session{
+    background-color: rgba(69,68,68,1);
+    width: 90%;
+    height: 80%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.session > .button {
+    width: 10rem;
+    height: 4rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #20bf6b;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.7rem;
+    padding: 0.7rem 0.5rem;
+}
+
+
+.session > .button:hover {
+    background-color: #FF9800;
+}
+
+.session > h2, .popup-content > h2{
+    width: 100%;
+    font-size: 3rem;
+    color: #eee;
+    padding-top: 1rem;
+    text-align: center;
+    border-bottom: 4px solid #20bf6b;
+}
+
+.training-container > .session > img{
+    width: 65%;
+    height: auto;
+}
+
+
+#session-1{
+    grid-area: day-1; 
+}
+
+#session-2{
+    grid-area: day-2;
+}
+
+#session-3{
+    grid-area: day-3;
+}
+
+#session-4{
+    grid-area: day-4;
+}
+
+
+/* pop up */
+
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(186,186,186,0.8) 0%, rgba(73,73,73,0.8) 100%);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+    animation-name: zoomIn;
+    animation-duration: 0.5s;
+}
+
+.popup-close {
+    position: absolute;
+    font-size: 3rem;
+    right: 3rem;
+    top: 3rem;
+    line-height: 0;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 999;
+    text-decoration: none;
+}
+
+.popup-close:hover {
+    color: #20bf6b;
+}
+
+.popup-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60vh;
+    box-shadow: 0 2rem 4rem rgba(black, .2);
+    border-radius: 3px;
+    position: relative;
+    background: rgba(69,68,68,1);
+}
+
+.popup-content > .popup-line{
+    margin-top: 1.5rem;
+    height: 0.5em;
+
+}
+
+.popup-content > h3{
+    font-size: 4em;
+    margin-top: 5rem;
+    padding: 0 2rem;
+    font-weight: 700;
+        color:#eee;
+}
+
+.popup-content > p{
+    font-size: 2.5em;
+    margin-top: 5rem;
+    padding: 0 2rem;
+    color:#eee;
+}
+
+/* Table section */
+#table-section{
+    background-color:rgba(69,68,68,0.8);
+    width: 100vw;
+    height: 72vh;
+}
+
+#training-table{
+    background-color: hsl(168, 0%, 80%);
+    border-collapse: collapse;
+    width: 90%;
+    font-size: 1.4rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+
+#training-table td, #training-table th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#training-table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3CC194;
+    color: white;
+    text-align: center;
+}
+
+#training-table tr:nth-child(even){
+    background-color: #eee;
+}
+
+#training-table tr:hover {
+    background-color: #ddd;
+}
+
+.table-header{
+    width: 100%;
+    height: 10rem;
+    background-color:rgba(69,68,68,0.8);
+    text-align: center;
+}
+
+.table-header h2{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1.2rem;
+}
+
+.table-header p {
+    color: #eee;
+    font-size: 1.6rem;
+}
+
+.trainingOnline-footer{
+    position: absolute;
+    top: calc(278vh - 7vh);
+}
+
+/* Begining of Review Page */
+
+.reviews-container{
+    width: 100vw;
+    height: 100rem;
+    background-color:rgba(69,68,68,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.customer-review{
+    background-color: #FBFCFC;
+    width: 90vw;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+}
+.reviews-container > h1{
+    padding-top: 15rem;
+}
+
+.customer-review > .customer {
+    color: #17202A;
+    font-size: 1.8rem;
+    width: 35%;
+    border-right: 4px solid #3CC194;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.customer-review > p {
+    color: #17202A;
+    font-size: 1.7rem;
+    padding: 2%;
+    width: 80%;
+}
+
+/* review form */
+.review-form{
+    width: 100%;
+    height: 100rem;
+    background-color: rgba(69,68,68,0.8);
+}
+
+.review-form > h1 {
+    padding: 3rem;
+}
+
+.review-form form{
+    background: radial-gradient(circle, rgba(212,215,214,1) 1%, rgba(140,140,140,1) 100%);
+    text-align: left;
+    width: 60%;
+    height: 75rem;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding-top: 2rem;
+}
+
+.review-form form > label {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    display: block;
+    margin-left: 1rem;
+}
+
+
+input[type=text], input[type=submit], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 1rem;
+}
+
+.radio-btns {
+    font-size: 1.6rem;
+    margin: 2rem 0 2rem 1rem; 
+}
+
+.radio-btns label {
+    margin-right: 3rem;
+}
+
+.review-form form textarea {
+    width: 90%;
+    height: 10rem;
+}
+
+input[type=submit] {
+    background-color: #3CC194;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 15rem;
+    border: none;
+}
+
+.review-footer{
+    position: absolute;
+    top: calc(207rem - 7rem);
+}
+
+
+/* Small screens, Laptop - Landscape (1024 px)*/
+@media only screen and (max-width: 64em){
+
+    nav ul li a{
+        font-size: 1.5rem;
+    }
+
+    .searchbar-container input:focus{
+        width: 40vw;
+    }
+    /*  */
+    .hero__article h1{
+        font-size: 4rem;
+    }
+    
+    .hero__article h2{
+        font-size: 2.3rem;
+    }
+
+    .card-container{
+        width: 95%;
+        height: 60vh;
+    }
+
+    .card > h3{
+        font-size: 3rem;
+        margin: 1rem;
+        font-weight: 600;
+    }
+
+    .video-container video{
+        height: 65%;
+        width: 100%;
+        margin: 5rem auto;
+    }
+
+    .video-container{
+        height: 120vh;
+        clip-path: polygon(50% 9%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    footer{
+        top: 219vh;
+    }
+    
+    footer > p{
+        font-size: 1.7rem;
+    }
+/* End of Home Page */
+
+/* Begining of FAQ Page */
+    #faq .question-container > .question{
+        width: 50rem;
+    }
+
+    .faq--header .line{
+        width: 25rem;
+    }
+}
+
+/* Breakpoint dedicated to the Hamburger button (850 px)*/
+@media only screen and (max-width: 53.12em){
+     /* Hamburger Button */
+     nav #menuToggle {
+        display: block;
+        position: fixed;
+        right: 2rem;
+        top: 3em;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+            
+    #menuToggle input {
+        visibility: visible;
+        display: block;
+        width: 4rem;
+        height: 3.2rem;
+        position: absolute;
+        top: -0.4rem;
+        left: -0.3rem;
+        cursor: pointer;  
+        opacity: 0; /* hide this */
+        z-index: 10; /* and place it over the hamburger */
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #eee;
+        border-radius: 3px;
+        z-index: 9;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background-image: linear-gradient(to right, #aaffa9, #11ffbd)
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    nav #menu {
+        position: fixed;
+        top: 0;
+        padding-top: 5rem;
+        width: 100vw;
+        height: 100vh;
+        background: #494949;
+        transform-origin: 0% 0%;
+        transition: left 0.5s cubic-bezier(0.77,0.2,0.05,1.0); 
+        z-index: 8;
+        left: -110%;
+        overflow: hidden;
+    }
+
+    #menu li {
+        display: inline-block;
+        width: 100%;
+        height: 12%;
+        text-align: center;
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    /* slide the menue when the burger button is pressed */
+    #menuToggle input:checked ~ ul {
+        left: 0;
+    }
+
+    .locations-container{
+        width: 100vw;
+        height: 170rem;
+        margin-top: 2rem;
+    }
+}
+
+/*iPads, Tablets. Landscape  (768 px)*/
+@media only screen and (max-width: 48em) {
+
+    html{
+        overflow-x: hidden;
+    }
+    /* hero section image */
+    .hero img{
+        background-position: center;
+        width: auto;
+        height: 100vh;
+    }
+
+    /* hero article */
+    .hero__article h1{
+        font-size: 3.5rem;
+    }
+    
+    .hero__article h2{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    
+    /* Searchbar */
+    .searchbar-container input:focus{
+        width: 50vw;
+    }
+
+    /* activity header and video header*/
+    .activities--header > h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-top: 3rem;
+    }
+    .video--header > h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .card-container{
+        height: 50vh;
+        position: relative;
+        top: -5rem;
+    }
+    /* End of Index */
+
+/* Activity section */
+    .activities{
+        height: 200vh;
+        clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
+    }
+    .activities--header .line, .video--header .line {
+        height: 0.3rem;
+        width: 40%;
+    }
+    
+    .card-container{
+        width: 60%;
+        height: 170vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+        height: 57rem;
+        margin: 3rem auto 0 auto;
+    }
+    
+    .card:first-child{
+        margin-top: 0;
+    }
+    
+    .card > h3{
+        font-size: 2.5rem;
+    }
+    
+
+    /* video section */
+    .video-container{
+        top: 292vh;
+        height: 100vh;
+        clip-path: polygon(50% 8%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    
+    .video-container video{
+        margin-top: 5rem;
+        height: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    /* footer */
+    footer {
+        position: relative;
+        top: 292vh;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer > * {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }   
+    /* end of Home page */
+
+    /* Begining of FAQ Page */
+    #faq .question-container > .question {
+        width: 90%;
+    }
+
+    .question > h3 {
+        font-size: 1.3rem;
+        padding: 0.7rem;
+    }
+
+    #faq{
+        background-color:rgba(69,68,68,0.8);
+        width: 100vw;
+        height: 104vh;
+    }
+
+    #faq .faq--header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .question > .question-text {
+        font-size: 1.7rem;
+        height: 7.6rem;
+        width: 100%;
+    }
+    .question > h3{
+        font-size: 1.6rem;
+    }
+    /* end of Faq */
+
+    /* Begining of Member Area */
+    .MemberArea--header > h3{
+        font-size: 1.8rem;
+    }
+
+    .subscription-container{
+        width: 80vw;
+    }
+    
+    .subscription-container .subscription-input{
+        width: 90%;
+    }
+
+    /* begining of Training online */
+
+    .training-container {
+        height: 270vh;
+        display: grid;
+        grid-template-columns: 0.7fr;
+        grid-template-rows: 1.5fr 1.5fr 1.5fr 1.5fr; 
+        justify-content: center;
+        grid-template-areas: 
+        "day-1"
+        "day-2"
+        "day-3"
+        "day-4";
+        padding: 3rem 0 5rem 0;
+    }
+
+    .training-container > .session{
+        width: 90%;
+        height: 100%;
+    }
+    
+    .trainingOnline-footer{
+        top: calc(345vh + 35rem - 7vh);
+    }
+
+    .trainingOnlineHeader > p{
+        font-size: 1.8rem;
+    }
+
+    .popup-content{
+        width: 80%;
+        height: 60%;
+    }
+
+    .popup-content > h3{
+        font-size: 3em;
+    }
+
+    .trainingOnlineHeader{
+        padding-top: 24.5vh;
+        height: 40rem;
+    }
+
+    /* begining of Community group */
+    .communityGoal > h1 {
+        padding-top: 27vh;
+    }
+
+    #communityGroup{
+        overflow-y: hidden;
+        width: 100vw;
+        height: 120rem;
+        background-color:rgba(69,68,68,0.8);
+    }
+
+    .location p{
+        padding: 5rem 0 0 1rem;
+        font-size: 1.7rem;
+        line-height: 2.5em;
+    }
+
+    .trainingOnline-footer{
+        top: calc(347vh + 35rem - 7vh);
+    }
+
+    /* Befgining of review page */
+    .customer-review > .customer {
+        font-size: 1.6rem;
+        width: 55%;
+        padding-top: 11rem;
+    }
+
+    .customer-review{
+        height: 25rem;
+    }
+
+    .customer-review > p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile devices  (374 px)*/
+@media only screen and (max-width: 23.5em) {
+
+    /* searchbar */
+    .searchbar-container input{
+        width: 80%;
+        height: 3rem;
+    }
+
+    /* hero section image */
+    .hero img{
+        width: auto;
+        height: 100vh;
+    }
+
+    /* hero article */
+    .hero__article h1{
+        font-size: 3rem;
+    }
+    
+    .hero__article h2{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    /* scroll down */
+    .hero .hero-scroll-down{
+        transform: translateX(0);
+    } 
+
+    /* activity header and video header*/
+    .activities--header > h1, .video--header > h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .activities{
+        height: 190vh;
+        clip-path: polygon(100% 0, 100% 97%, 50% 100%, 0 97%, 0 0);
+    }
+
+    .activities--header .line, .video--header .line{
+        height: 0.3rem;
+        width: 40%;
+    }
+    
+    .card-container{
+        width: 75%;
+        height: 155vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+        height: 57rem;
+        margin: 5rem auto 0 auto;
+    }
+        
+    .card > h3{
+        font-size: 2rem;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+
+    .card >h4{
+        font-size: 1.5rem;
+    }
+    
+    .card > .card--btn{
+        width: 7rem;
+        height: 3rem;
+        bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+
+    /* video section */
+    .video-container{
+        top: 284vh;
+        height: 100vh;
+        clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    
+    /* footer */
+    footer{
+        position: relative;
+        top: 267.8vh;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+    
+    footer > p{
+        font-size: 1.2rem;
+        padding-top: 0.5rem
+    }
+    /* End of Index */
+
+    /* Beggining of FAQ */
+    #faq .faq--header h1, .MemberArea--header > h1{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .question > h3{
+        font-size: 1.3rem;
+    }
+
+    .searchbar-container input{
+        width: 3.8rem;
+        height: 3.8rem;
+        position: fixed;
+        top: 7rem;
+        left: 0;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    } 
+    
+    .searchbar-container input:focus{
+        width: 90vw;
+    }
+
+    #communityGroup{
+        height: 240vh;
+    }
+
+    .communityGoal > p, .glidingLaw > p{
+        column-count: 1;
+    }
+
+    /* Begining of member area */
+    .MemberArea--header > h3{
+        font-size: 1.8rem;
+    }
+
+    .subscription-container{
+        width: 90vw;
+    }
+    
+    .subscription-container .subscription-input{
+        width: 90%;
+    }
+    /* End of member area */
+
+    /* begining og community group */
+
+    .communityGoal > h1, .glidingLaw > h1{
+        font-size: 2.5rem;
+    }
+
+    .communityGoal > .line, .glidingLaw > .line{
+        height: 0.4rem;
+    }
+
+    /* Beginig of Latest place to fly */
+    .location{
+        height: 25.7rem;
+    }
+
+    .latestPlaceToFly-title{
+        font-size: 2.5rem;
+    }
+    .location p{
+        padding: 7rem 0 0 1rem;
+        font-size: 1.5rem;
+        line-height: 2em;
+    }
+
+    /* Begining of latest places to fly */
+
+    .locations-container{
+        height: 150rem;
+    }
+
+    .latestPlaceToFly-footer{
+        position: absolute;
+        top: calc(187rem - 7rem);;
+    }
+
+    /* Begining of Training online */
+    .trainingOnlineHeader > h1{
+        font-size: 2.5rem;
+    }
+    .trainingOnlineHeader > p{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .trainingOnlineHeader{
+        height: 30rem;
+    }
+
+    .training-container > .session{
+        width: 100%;
+        height: 90%;
+    }
+
+    .popup-content{
+        width: 90%;
+        height: 60vh;
+    }
+
+    .popup-content > h3{
+        font-size: 3em;
+    }
+    
+    .popup-content > p{
+        font-size: 2.2em;
+        margin-top: 3rem;
+        padding: 0 2rem;
+        color:#eee;
+    }
+
+    .table-header h2{
+        font-size: 1.8rem;
+    }
+    
+    .table-header p {
+        font-size: 1.5rem;
+        padding: 0 0.2rem;
+    }
+
+    .trainingOnline-footer{
+        top: calc(339vh + 35rem - 7vh);
+    }
+
+    /* Table */
+    #training-table{
+        font-size: 1.6em;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        background-color: hsl(204, 8%, 81%);
+    }
+    
+    #training-table td, #training-table th{
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    /* begining of Review page */
+    .reviews-container{
+        height: 130rem;
+    }
+    .customer-review{
+        background-color: #FBFCFC;
+        width: 90vw;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2px;
+    }
+    .reviews-container > h1, .review-form > h1 {
+        font-size: 2.5rem;
+    }
+
+    .customer-review > p {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+    .customer-review > .customer {
+        font-size: 1.8rem;
+        width: 100%;
+        border: none;
+        border-bottom: 4px solid #3CC194;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .review-form{
+        width: 100%;
+        height: 110rem;
+        background-color: rgba(69,68,68,0.8);
+    }
+    
+    .review-form form{
+        background: radial-gradient(circle, rgba(212,215,214,1) 1%, rgba(140,140,140,1) 100%);
+        text-align: left;
+        width: 90%;
+        height: 80rem;
+        margin: 0 auto;
+        border-radius: 2px;
+        padding-top: 2rem;
+    }
+    
+    .review-form form > label {
+        font-size: 1.8rem;
+        display: block;
+    }
+    
+    
+    input[type=text], input[type=submit], select, textarea {
+        width: 90%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+    
+    .radio-btns > *{
+        font-size: 1.6rem;
+        margin:1rem;  
+    }
+
+    input[type=submit] {
+        border: none;
+    }
+    
+    .review-footer{
+        position: absolute;
+        top: calc(240rem - 7rem);
+    }
+    
+}
+
+/* Large screens (1025 px)*/
+@media only screen and (min-width: 64.06em){
+    nav ul li a{
+        font-size: 1.8rem;
+    }
+
+    .location{
+        width: 70%;
+        height: 35.7rem;
+    }
+
+    #training-table{
+        width: 60%;
+    }
+
+    .trainingOnline-footer {
+        top: calc(235vh + 35rem - 7vh);
+    }
+
+    .training-container > .session {
+        width: 70%;
+        height: 90%;
+    }
+
+}

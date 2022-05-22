@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>Member Area</title>
+
+</head>
+<body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="assets/images/web-logo.svg" alt="website-logo">
+        </div>
+
+        <nav>
+          <div id="menuToggle">
+            <input class="burger-input" type="checkbox"/>
+            
+            <!-- burger-spans -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- menu -->
+            <ul id="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="member-area.html" class="member-area">Member Area</a></li>
+              <li><a href="community-group.html" class="community group">Community Group</a></li>
+              <li><a href="latest-places-to-fly.html">Latest Places to Fly</a></li>
+              <li><a href="training-online.html">Training Online</a></li>
+              <li><a href="review.html">Review</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="MemberArea" class="MemberArea">
+      <img src="./assets/images/GlidingAndSunset.jpg" alt="background gliding image">
+      <div class="searchbar-container">
+        <form id="search-from"> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+          <input class="searchbar" id="search" type="search" onkeypress="handle(event)"/>
+        </form>
+      </div>
+      <div class="MemberArea--header" id="search-word-1">
+          <h1>Join us!</h1>
+          <h3>We look forward to hearing from you.</h3>
+      </div>
+
+      <form class="subscription-container"><!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+          <input placeholder="Email" class="subscription-input" type="email"/>
+          <button type="submit" class="subscription-button" id="search-word-2">Subscribe</button>
+      </form>
+
+
+  </section>
+
+
+    <footer class="MemberArea-footer">
+        <p>All rights reserved to MG Gliders. | &copy; 2021</p>
+        <div class="social-media-container">
+          <a href="https://www.facebook.com/wildparagliding/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/goparagliding/?hl=en" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/results?search_query=hang+gliding" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

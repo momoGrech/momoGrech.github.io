@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>Training Online</title>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="assets/images/web-logo.svg" alt="website-logo">
+        </div>
+
+        <nav>
+          <div id="menuToggle">
+            <input class="burger-input" type="checkbox"/>
+            
+            <!-- burger-spans -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- menu -->
+            <ul id="menu" class="home-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="member-area.html">Member Area</a></li>
+              <li><a href="community-group.html">Community Group</a></li>
+              <li><a href="latest-places-to-fly.html">Latest Places to Fly</a></li>
+              <li><a href="training-online.html" class="trainingOnline">Training Online</a></li>
+              <li><a href="review.html">Review</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="searchbar-container training-online-searchbar">
+        <form id="search-from"> <!-- The form tag should contain action="". It was removed as to pass from the W3C Validator-->
+            <input class="searchbar" id="search" type="search" onkeypress="handle(event)"/>
+        </form>>
+    </div>
+
+    <div class="scroll-up" id="PlacesToFly-arrowUp">
+        <a href="#search-word-1" class="arrow-up-link">
+          <i class="fas fa-chevron-circle-up arrow-up"></i>
+        </a>
+    </div>
+    <div class="trainingOnlineHeader" id="search-word-1">
+        <h1>Training sessions</h1>
+        <p>New Members are provided with a numer of training sessions as a preparation for gliding.</p>
+    </div>
+
+    <section class="training-container" id="search-word-2">
+        <div class="session" id="session-1">
+            <h2>Day 1</h2>
+            <img src="./assets/images/fitnessBackTrain.png" alt="day 1 training session" width="512" height="512">
+            <a href="#popup-1" class="button">Learn more</a>
+        </div>
+
+        <div class="session" id="session-2">
+            <h2>Day 2</h2>
+            <img src="./assets/images/fitnessArmTrain.png" alt="day 2 training session" width="512" height="512">
+            <a href="#popup-2" class="button">Learn more</a>
+        </div>
+
+        <div class="session" id="session-3">
+            <h2>Day 3</h2>
+            <img src="./assets/images/fitnessLegTrain.png" alt="day 3 training session" width="512" height="512">
+            <a href="#popup-3" class="button">Learn more</a>
+        </div>
+
+        <div class="session" id="session-4">
+            <h2>Day 4</h2>
+            <img src="./assets/images/certificate.svg" alt="day 4 training session" width="512" height="512">
+            <a href="#popup-4" class="button">Learn more</a>
+        </div>
+    </section>
+
+
+    <!-- popup 1 -->
+    <div class="popup animated" id="popup-1">
+        <div class="popup-content">
+            <a class="popup-close animated" href="#training-container">&times;</a>
+            <h2>Day 1</h2>
+            <h3>Back strengthening exercises</h3>
+            <p>Back strengthening exercise is our first training session in preparation for gliding.
+                During this session, our professional educator is instructing you in full detail on how to prevent
+                from a back injury when gliding and dealing with any strength while gliding.</p>
+        </div>
+    </div>
+
+    <!-- popup 2 -->
+    <div class="popup animated" id="popup-2">
+        <div class="popup-content">
+            <a class="popup-close animated" href="#training-container">&times;</a>
+            <h2>Day 2</h2>
+            <h3>Arm strengthening exercises</h3>
+            <p>Arm stringing is an essential session and an important part of the gliding license due to the use of
+                 arms constantly to curve and control yourself while gliding. After this session, 
+                gliders will be confident in handling and controlling any type of gliding toolkit.</p>
+        </div>
+    </div>
+
+    <!-- popup 3 -->
+    <div class="popup animated" id="popup-3">
+        <div class="popup-content">
+            <a class="popup-close animated" href="#training-container">&times;</a>
+            <h2>Day 3</h2>
+            <h3>Leg strengthening exercises</h3>
+            <p>Leg exercise is the third and last physical session required to lead you to the gliding license. 
+                This session comes in when gliders have to 
+                be well prepared when speeding up for a jump in a height as well as when landing.</p>
+        </div>
+    </div>
+
+    <!-- popup 4 -->
+    <div class="popup animated" id="popup-4">
+        <div class="popup-content">
+            <a class="popup-close animated" href="#training-container">&times;</a>
+            <h2>Day 4</h2>
+            <h3>Certificte achievment</h3>
+            <p>Exam sessions will conduct the required sessions in order to be qualified globally for gliding. 
+                During this session, gliders will be provided with a number of questions related to law, 
+                safety, and procedure for gliding. The minimum pass mark for this test is 75.</p>
+        </div>
+    </div>
+
+    <!-- table -->
+    <section id="table-section">
+        <section class="table-header">
+            <h2>Further details on our Online Training</h2>
+            <p>Our online sessions take place as indicated in the below table.</p>
+        </section>
+        <table id="training-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Duration</td>
+                    <td>3hours</td>
+                    <td>4hours</td>
+                    <td>2hours</td>
+                    <td>1hours</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Monday</td>
+                    <td>Wednesday</td>
+                    <td>Friday</td>
+                    <td>Saturday</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>€50</td>
+                    <td>€50</td>
+                    <td>€50</td>
+                    <td>€150</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+
+    <footer class="trainingOnline-footer">
+        <p>All rights reserved to MG Gliders. | &copy; 2021</p>
+        <div class="social-media-container">
+            <a href="https://www.facebook.com/wildparagliding/" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/goparagliding/?hl=en" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=hang+gliding" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
